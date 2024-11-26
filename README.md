@@ -81,5 +81,5 @@ alembic revision --autogenerate -m "Update models with correct table names and r
 2. Apply the migrations:
 
 ```sh
-alembic upgrade head
+alembic upgrade head 
 ```

@@ -1,6 +1,7 @@
 import pytest
 from .utils import create_user, login_user
-from app.core.jwt import create_access_token
+# from app.core.jwt import create_access_token
+from src.auth.utils import create_access_token
 from datetime import timedelta
 
 def test_register_user(client, unique_username, unique_email):

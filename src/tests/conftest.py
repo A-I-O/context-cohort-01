@@ -1,12 +1,17 @@
+import os
+os.environ["TESTING"] = "True"
 import pytest
 import random
 import os
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.main import app
-from app.db.base import Base
-from app.db.session import get_db
+from src.main import app
+# from app.main import app
+from src.database import Base  # Changed from app.db.base
+from src.database import get_db  
+# from app.db.base import Base
+# from app.db.session import get_db
 from .utils import create_user, login_user
 
 # Define a SQLite URL for testing
